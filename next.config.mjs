@@ -5,6 +5,9 @@ const withAnalyzer = bundleAnalyzer({ enabled: process.env.ANALYZE === "true" })
 
 const isProd = process.env.NODE_ENV === "production";
 
+/** Stack Docker locale http://localhost — sans TLS, ne pas forcer upgrade-insecure-requests. */
+const dockerLocalHttp = process.env.DOCKER_LOCAL_HTTP === "1";
+
 const baseDirectives = {
   ...helmet.contentSecurityPolicy.getDefaultDirectives(),
   "default-src": ["'self'"],
@@ -17,6 +20,9 @@ const baseDirectives = {
   "object-src": ["'none'"],
   "upgrade-insecure-requests": [],
 };
+if (dockerLocalHttp) {
+  delete baseDirectives["upgrade-insecure-requests"];
+}
 
 /** CSP : moins permissif en production (pas de eval). Monitoring Vercel + Sentry autorisés si besoin. */
 const cspDirectives = isProd
@@ -82,7 +88,7 @@ const nextConfig = {
         value: cspHeaderValue(cspDirectives),
       },
     ];
-    if (isProd) {
+    if (isProd && !dockerLocalHttp) {
       base.push({
         key: "Strict-Transport-Security",
         value: "max-age=63072000; includeSubDomains; preload",

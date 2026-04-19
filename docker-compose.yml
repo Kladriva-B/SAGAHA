@@ -1,0 +1,50 @@
+# Stack locale : PostgreSQL + application SAGAHA
+# Usage :
+#   docker compose up --build
+#   puis (optionnel) : docker compose exec app npm run db:seed
+# Développement sur la machine hôte avec seulement la DB :
+#   docker compose up -d postgres
+#   DATABASE_URL=postgresql://sagaha:sagaha@localhost:5432/sagaha?schema=public npm run dev
+
+name: sagaha
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sagaha
+      POSTGRES_PASSWORD: sagaha
+      POSTGRES_DB: sagaha
+    ports:
+      - "5432:5432"
+    volumes:
+      - sagaha_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sagaha -d sagaha"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      # Cookies lisibles en http://localhost (stack Docker locale sans TLS)
+      DOCKER_LOCAL_HTTP: "1"
+      DATABASE_URL: postgresql://sagaha:sagaha@postgres:5432/sagaha?schema=public
+      NEXTAUTH_URL: http://localhost:3000
+      AUTH_URL: http://localhost:3000
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+      # Secrets de dev uniquement — remplacez en prod (ou surchargez depuis un fichier .env à la racine du projet)
+      AUTH_SECRET: ${AUTH_SECRET:-local-docker-sagaha-auth-secret-min-32-chars-please-change}
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:-local-docker-sagaha-auth-secret-min-32-chars-please-change}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  sagaha_postgres_data:
