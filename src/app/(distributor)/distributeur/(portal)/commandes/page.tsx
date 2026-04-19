@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
@@ -24,8 +25,9 @@ const statusFr: Record<string, string> = {
 
 export default async function CommandesPage() {
   const session = await auth();
-  const dist = await prisma.distributor.findUnique({ where: { userId: session!.user!.id } });
-  if (!dist) return null;
+  if (!session?.user?.id) redirect("/login?callbackUrl=/distributeur/commandes");
+  const dist = await prisma.distributor.findUnique({ where: { userId: session.user.id } });
+  if (!dist) redirect("/unauthorized");
 
   const orders = await prisma.order.findMany({
     where: { distributorId: dist.id },

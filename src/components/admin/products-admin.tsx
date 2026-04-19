@@ -119,14 +119,14 @@ export function ProductsAdmin({ initial }: { initial: ProductRow[] }) {
             setEditing(null);
             setForm(emptyForm);
           }}
-          className="rounded-lg bg-sagaha-primary px-4 py-2 text-sm font-semibold text-white hover:bg-[#388e3c]"
+          className="rounded-lg bg-sagaha-primary px-4 py-2 text-sm font-semibold text-white hover:bg-sagaha-vine"
         >
           Nouveau produit
         </button>
       </div>
 
       {lowStock.length > 0 ? (
-        <div className="rounded-xl border border-amber-500/35 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+        <div className="rounded-xl border border-sagaha-accent/35 bg-sagaha-accent/10 px-4 py-3 text-sm text-sagaha-mist">
           <span className="font-semibold">{lowStock.length}</span> référence(s) sous le seuil d’alerte stock.
         </div>
       ) : null}
@@ -159,7 +159,7 @@ export function ProductsAdmin({ initial }: { initial: ProductRow[] }) {
                 <td className="px-3 py-2 text-sagaha-mist/75">{p.category}</td>
                 <td className="px-3 py-2 tabular-nums">{p.price.toLocaleString("fr-CM")} XAF</td>
                 <td className="px-3 py-2">
-                  <span className={p.stock <= p.minStockAlert ? "text-amber-300" : "text-sagaha-mist"}>{p.stock}</span>
+                  <span className={p.stock <= p.minStockAlert ? "text-sagaha-accent" : "text-sagaha-mist"}>{p.stock}</span>
                   <span className="text-xs text-sagaha-mist/45"> / min {p.minStockAlert}</span>
                 </td>
                 <td className="px-3 py-2">{p.isActive ? "oui" : "non"}</td>

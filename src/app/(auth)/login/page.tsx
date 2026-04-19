@@ -7,9 +7,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { darkFormInputClassName } from "@/lib/dark-form-field";
 
-const field =
-  "border-sagaha-accent/25 bg-sagaha-deep/50 text-white placeholder:text-sagaha-mist/35 focus:border-sagaha-accent/50 focus:ring-sagaha-accent/25";
+const field = darkFormInputClassName;
 
 export default function LoginPage() {
   const searchParams = useSearchParams();

@@ -12,12 +12,15 @@ export function TeaLeafArt() {
       transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
       aria-hidden
     >
-      <svg viewBox="0 0 400 420" className="h-auto w-full text-sagaha-accent/90 drop-shadow-[0_0_40px_rgba(102,187,106,0.25)]">
+      <svg
+        viewBox="0 0 400 420"
+        className="h-auto w-full text-sagaha-accent/45 drop-shadow-[0_0_42px_rgba(149,82,128,0.28),0_0_28px_rgba(109,159,122,0.15)]"
+      >
         <defs>
           <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#66bb6a" stopOpacity="0.95" />
-            <stop offset="55%" stopColor="#2e7d32" stopOpacity="0.85" />
-            <stop offset="100%" stopColor="#1b3a24" stopOpacity="0.9" />
+            <stop offset="0%" stopColor="#8fbf9c" stopOpacity="0.95" />
+            <stop offset="42%" stopColor="#955280" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#120818" stopOpacity="0.92" />
           </linearGradient>
           <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
             <feGaussianBlur stdDeviation="6" result="b" />

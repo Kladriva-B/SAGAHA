@@ -42,7 +42,7 @@ function SocialIcon({ href, label, children }: { href: string; label: string; ch
 
 export function PublicFooter() {
   return (
-    <footer className="border-t border-sagaha-accent/15 bg-[#071510] py-16 md:py-20">
+    <footer className="border-t border-sagaha-accent/15 bg-slate-950 py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">

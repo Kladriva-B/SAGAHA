@@ -67,7 +67,7 @@ export function PublicNavbar() {
             </Link>
             <a
               href="#produits"
-              className="rounded-full bg-sagaha-primary px-6 py-2.5 text-sm font-semibold tracking-wide text-white shadow-lux-glow transition hover:bg-[#388e3c]"
+              className="rounded-full bg-sagaha-primary px-6 py-2.5 text-sm font-semibold tracking-wide text-white shadow-lux-glow transition hover:bg-sagaha-vine"
             >
               Commander
             </a>
@@ -151,7 +151,7 @@ export function PublicNavbar() {
                 </Link>
                 <a
                   href="#produits"
-                  className="block rounded-full bg-sagaha-primary py-3 text-center text-sm font-semibold text-white"
+                  className="block rounded-full bg-sagaha-primary py-3 text-center text-sm font-semibold text-white hover:bg-sagaha-vine"
                   onClick={() => setOpen(false)}
                 >
                   Commander

@@ -44,7 +44,7 @@ export function ContactSection() {
           >
             <Link
               href="/register"
-              className="inline-flex items-center justify-center rounded-full bg-sagaha-primary px-8 py-4 text-center text-sm font-semibold tracking-wide text-white shadow-lux-glow transition hover:bg-[#388e3c]"
+              className="inline-flex items-center justify-center rounded-full bg-sagaha-primary px-8 py-4 text-center text-sm font-semibold tracking-wide text-white shadow-lux-glow transition hover:bg-sagaha-vine"
             >
               Ouvrir un dossier distributeur
             </Link>

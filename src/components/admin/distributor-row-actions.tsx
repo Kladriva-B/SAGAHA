@@ -41,7 +41,7 @@ export function DistributorRowActions({ row }: { row: Row }) {
             type="button"
             disabled={busy}
             onClick={() => void patch("approve")}
-            className="rounded-lg bg-sagaha-primary px-2 py-1 text-xs font-semibold text-white hover:bg-[#388e3c] disabled:opacity-50"
+            className="rounded-lg bg-sagaha-primary px-2 py-1 text-xs font-semibold text-white hover:bg-sagaha-vine disabled:opacity-50"
           >
             Approuver
           </button>

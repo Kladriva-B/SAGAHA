@@ -98,7 +98,7 @@ export function OrdersKanban({ initial }: { initial: KanbanOrder[] }) {
 
       {grouped.OTHER.length > 0 ? (
         <section className="rounded-xl border border-sagaha-accent/15 bg-sagaha-deep/35 p-4">
-          <h2 className="text-sm font-semibold text-amber-200">Autres statuts (brouillon / annulé)</h2>
+          <h2 className="text-sm font-semibold text-sagaha-accent">Autres statuts (brouillon / annulé)</h2>
           <ul className="mt-2 space-y-2 text-xs text-sagaha-mist/75">
             {grouped.OTHER.map((o) => (
               <li key={o.id}>

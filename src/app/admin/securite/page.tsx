@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { TwoFactorPanel } from "@/components/admin/two-factor-panel";
 import { prisma } from "@/lib/prisma";
@@ -6,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 export default async function AdminSecuritePage() {
   const session = await auth();
-  if (!session?.user?.id) return null;
+  if (!session?.user?.id) redirect("/login?callbackUrl=/admin/securite");
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
     select: { totpEnabled: true },

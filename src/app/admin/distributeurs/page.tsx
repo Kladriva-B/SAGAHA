@@ -132,7 +132,7 @@ export default async function AdminDistributeursPage({ searchParams }: { searchP
         </div>
         <button
           type="submit"
-          className="rounded-lg bg-sagaha-primary px-4 py-2 text-sm font-semibold text-white hover:bg-[#388e3c]"
+          className="rounded-lg bg-sagaha-primary px-4 py-2 text-sm font-semibold text-white hover:bg-sagaha-vine"
         >
           Filtrer
         </button>

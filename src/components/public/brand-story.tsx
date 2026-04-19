@@ -18,8 +18,8 @@ export function BrandStorySection() {
           </h2>
           <p className="mt-6 text-base leading-relaxed text-sagaha-mist/85 md:text-lg">
             Du plateau aux ateliers de dégustation, SAGAHA orchestre chaque étape : origine contrôlée, séchage
-            lent, respect des arômes naturels. Nos blends révèlent la générosité des terroirs africains sans
-            compromis sur la pureté.
+            lent, respect des arômes naturels. Notre thé signature aux notes d’aubergine et fruits noirs
+            (Médimezon) marie profondeur veloutée et fraîcheur végétale — hommage au thé et à la nature.
           </p>
         </motion.div>
         <motion.div
@@ -37,7 +37,7 @@ export function BrandStorySection() {
               "Emballages conçus pour préserver fraîcheur et arôme.",
             ].map((line) => (
               <li key={line} className="flex gap-3 text-sm leading-relaxed md:text-base">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sagaha-accent shadow-[0_0_8px_#66bb6a]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-br from-sagaha-accent to-sagaha-leaf shadow-[0_0_10px_rgba(109,159,122,0.35)]" />
                 {line}
               </li>
             ))}

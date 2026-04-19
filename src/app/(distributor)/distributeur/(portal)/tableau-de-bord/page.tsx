@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
@@ -19,13 +20,14 @@ function startOfMonth(d = new Date()) {
 
 export default async function TableauDeBordPage() {
   const session = await auth();
+  if (!session?.user?.id) redirect("/login?callbackUrl=/distributeur/tableau-de-bord");
   const dist = await prisma.distributor.findUnique({
-    where: { userId: session!.user!.id },
+    where: { userId: session.user.id },
     include: {
       _count: { select: { orders: true } },
     },
   });
-  if (!dist) return null;
+  if (!dist) redirect("/unauthorized");
 
   const [monthAgg, recent, deliveredCount, pendingCount] = await Promise.all([
     prisma.order.aggregate({

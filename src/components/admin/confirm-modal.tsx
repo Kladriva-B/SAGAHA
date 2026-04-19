@@ -58,7 +58,7 @@ export function ConfirmModal({
             type="button"
             onClick={onConfirm}
             className={`rounded-lg px-4 py-2 text-sm font-semibold text-white ${
-              variant === "danger" ? "bg-red-700 hover:bg-red-800" : "bg-sagaha-primary hover:bg-[#388e3c]"
+              variant === "danger" ? "bg-red-700 hover:bg-red-800" : "bg-sagaha-primary hover:bg-sagaha-vine"
             }`}
           >
             {confirmLabel}

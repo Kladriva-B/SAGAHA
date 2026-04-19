@@ -8,4 +8,18 @@
 
 body {
   font-family: var(--font-sans);
+  /* Repli si les utilitaires Tailwind ne sont pas appliqués (évite une page entièrement blanche) */
+  background-color: #08050d;
+  color: #ebe4ef;
+}
+
+/* Autofill navigateur : même rendu que nos champs sombres (lisibilité) */
+input.sagaha-field:-webkit-autofill,
+input.sagaha-field:-webkit-autofill:hover,
+input.sagaha-field:-webkit-autofill:focus,
+input.sagaha-field:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #1a1424 inset !important;
+  -webkit-text-fill-color: #f5f0f8 !important;
+  caret-color: #f5f0f8;
+  transition: background-color 99999s ease-out;
 }

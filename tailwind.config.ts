@@ -15,25 +15,29 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        /** Luxe aubergine / champagne — verts réservés à l’identité nature & thé (sagaha.leaf) */
         sagaha: {
-          night: "#0a1f14",
-          deep: "#1b3a24",
-          primary: "#2e7d32",
-          accent: "#66bb6a",
-          mist: "#c8e6c9",
+          night: "#08050d",
+          deep: "#161022",
+          primary: "#955280",
+          vine: "#6b3d5f",
+          accent: "#d4b87d",
+          mist: "#ebe4ef",
+          leaf: "#6d9f7a",
           snow: "#ffffff",
         },
       },
       backgroundImage: {
         "lux-grid":
-          "linear-gradient(to right, rgba(102,187,106,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(102,187,106,0.06) 1px, transparent 1px)",
+          "linear-gradient(to right, rgba(212,184,125,0.055) 1px, transparent 1px), linear-gradient(to bottom, rgba(109,159,122,0.04) 1px, transparent 1px)",
       },
       backgroundSize: {
         lux: "48px 48px",
       },
       boxShadow: {
-        "lux-glow": "0 0 40px -8px rgba(102, 187, 106, 0.35)",
-        "lux-card": "0 24px 48px -20px rgba(0, 0, 0, 0.55)",
+        "lux-glow":
+          "0 0 52px -10px rgba(149, 82, 128, 0.42), 0 0 28px -14px rgba(212, 184, 125, 0.18)",
+        "lux-card": "0 24px 48px -20px rgba(0, 0, 0, 0.58)",
       },
       keyframes: {
         "lux-shimmer": {

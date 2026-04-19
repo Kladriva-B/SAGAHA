@@ -6,9 +6,9 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { darkFormInputClassName } from "@/lib/dark-form-field";
 
-const field =
-  "border-sagaha-accent/25 bg-sagaha-deep/50 text-white placeholder:text-sagaha-mist/35 focus:border-sagaha-accent/50 focus:ring-sagaha-accent/25";
+const field = darkFormInputClassName;
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -48,8 +48,22 @@ export default function RegisterPage() {
     });
     setLoading(false);
     if (!res.ok) {
-      const data = (await res.json().catch(() => ({}))) as { error?: string };
-      setError(data.error ?? "Inscription impossible.");
+      const data = (await res.json().catch(() => ({}))) as {
+        error?: string;
+        issues?: Record<string, string[] | undefined>;
+      };
+      const flatIssues = data.issues
+        ? Object.values(data.issues)
+            .flat()
+            .filter((x): x is string => Boolean(x))
+        : [];
+      setError(
+        data.error ??
+          flatIssues[0] ??
+          (res.status === 403
+            ? "Session sécurisée expirée : rechargez la page puis réessayez."
+            : "Inscription impossible."),
+      );
       return;
     }
     router.push("/login?registered=1");

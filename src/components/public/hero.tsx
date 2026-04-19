@@ -36,7 +36,7 @@ export function PublicHero() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-1/4 bottom-0 h-[480px] w-[480px] rounded-full bg-sagaha-accent/10 blur-[100px]"
+        className="pointer-events-none absolute -right-1/4 bottom-0 h-[480px] w-[480px] rounded-full bg-sagaha-leaf/12 blur-[100px]"
         aria-hidden
       />
 
@@ -46,10 +46,10 @@ export function PublicHero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-sagaha-accent/30 bg-sagaha-deep/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-sagaha-accent"
+            className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-sagaha-accent/35 bg-sagaha-deep/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-sagaha-accent"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-sagaha-accent shadow-[0_0_10px_#66bb6a]" />
-            Premium · Bio · Cameroun
+            <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-sagaha-accent to-sagaha-leaf shadow-[0_0_12px_rgba(212,184,125,0.5)]" />
+            Signature aubergine · Médimezon
           </motion.div>
 
           <motion.h1
@@ -83,7 +83,7 @@ export function PublicHero() {
           >
             <a
               href="#produits"
-              className="inline-flex items-center justify-center rounded-full bg-sagaha-primary px-8 py-3.5 text-sm font-semibold tracking-wide text-white shadow-lux-glow transition hover:bg-[#388e3c]"
+              className="inline-flex items-center justify-center rounded-full bg-sagaha-primary px-8 py-3.5 text-sm font-semibold tracking-wide text-white shadow-lux-glow transition hover:bg-sagaha-vine"
             >
               Découvrir nos thés
             </a>

@@ -93,7 +93,7 @@ export default async function AdminDashboardPage() {
       </div>
 
       {pendingDistributors > 0 ? (
-        <div className="rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+        <div className="rounded-xl border border-sagaha-accent/40 bg-sagaha-accent/10 px-4 py-3 text-sm text-sagaha-mist">
           <span className="font-semibold">{pendingDistributors}</span> distributeur(s) en attente d’approbation —{" "}
           <Link href="/admin/distributeurs?status=PENDING" className="underline underline-offset-2">
             Traiter

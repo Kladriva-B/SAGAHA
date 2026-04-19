@@ -14,7 +14,7 @@ export default async function EnAttentePage() {
 
   return (
     <main className="mx-auto flex min-h-screen max-w-lg flex-col justify-center px-6 py-16">
-      <div className="rounded-2xl border border-amber-400/25 bg-sagaha-deep/50 p-8 shadow-lux-card">
+      <div className="rounded-2xl border border-sagaha-accent/30 bg-sagaha-deep/50 p-8 shadow-lux-card">
         <h1 className="font-display text-2xl text-white">Candidature en cours d’étude</h1>
         <p className="mt-3 text-sm leading-relaxed text-sagaha-mist/75">
           Merci <span className="text-sagaha-accent">{dist.companyName}</span>. Votre dossier est en attente de

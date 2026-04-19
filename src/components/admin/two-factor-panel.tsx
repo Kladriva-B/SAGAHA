@@ -86,7 +86,7 @@ export function TwoFactorPanel({ enabled }: { enabled: boolean }) {
               type="button"
               disabled={loading}
               onClick={() => void startSetup()}
-              className="rounded-lg bg-sagaha-primary px-4 py-2 text-sm font-semibold text-white hover:bg-[#388e3c] disabled:opacity-50"
+              className="rounded-lg bg-sagaha-primary px-4 py-2 text-sm font-semibold text-white hover:bg-sagaha-vine disabled:opacity-50"
             >
               Générer une clé TOTP
             </button>
