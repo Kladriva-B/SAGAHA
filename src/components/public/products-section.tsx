@@ -95,7 +95,7 @@ function ProductCard({ product }: { product: PublicProduct }) {
 
 function ProductBadge({ type }: { type: ProductBadge }) {
   const styles: Record<ProductBadge, string> = {
-    Bio: "border-sagaha-leaf/50 bg-sagaha-leaf/15 text-emerald-50",
+    Bio: "border-sagaha-accent/45 bg-sagaha-accent/12 text-sagaha-mist",
     Nouveau: "border-sagaha-primary/55 bg-sagaha-primary/25 text-white",
     "Best-seller": "border-sagaha-accent/45 bg-sagaha-accent/12 text-sagaha-mist",
   };

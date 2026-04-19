@@ -36,7 +36,7 @@ export function PublicHero() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute -right-1/4 bottom-0 h-[480px] w-[480px] rounded-full bg-sagaha-leaf/12 blur-[100px]"
+        className="pointer-events-none absolute -right-1/4 bottom-0 h-[480px] w-[480px] rounded-full bg-sagaha-gild/14 blur-[100px]"
         aria-hidden
       />
 
@@ -48,7 +48,7 @@ export function PublicHero() {
             transition={{ duration: 0.6 }}
             className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-sagaha-accent/35 bg-sagaha-deep/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-sagaha-accent"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-sagaha-accent to-sagaha-leaf shadow-[0_0_12px_rgba(212,184,125,0.5)]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-sagaha-accent to-sagaha-primary shadow-[0_0_14px_rgba(212,175,55,0.55)]" />
             Signature aubergine · Médimezon
           </motion.div>
 

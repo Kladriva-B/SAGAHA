@@ -5,7 +5,7 @@ import type { CameroonRegionId, RegionMarker } from "@/lib/public-content";
 
 /**
  * Carte stylisée du Cameroun (silhouette pays) + repères régionaux.
- * Palette aubergine / champagne / vert thé (luxe & nature).
+ * Palette luxe impérial : or, bordeaux, onyx (alignée tailwind sagaha.*).
  */
 export function CameroonMap({
   markers,
@@ -30,13 +30,13 @@ export function CameroonMap({
         >
           <defs>
             <linearGradient id="camLand" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#1f1528" />
-              <stop offset="45%" stopColor="#16101f" />
-              <stop offset="100%" stopColor="#0a060e" />
+              <stop offset="0%" stopColor="#1a0f14" />
+              <stop offset="45%" stopColor="#120a10" />
+              <stop offset="100%" stopColor="#050308" />
             </linearGradient>
             <linearGradient id="camShore" x1="0%" y1="100%" x2="80%" y2="0%">
-              <stop offset="0%" stopColor="#d4b87d" stopOpacity="0.32" />
-              <stop offset="100%" stopColor="#6d9f7a" stopOpacity="0.08" />
+              <stop offset="0%" stopColor="#d4af37" stopOpacity="0.28" />
+              <stop offset="100%" stopColor="#7f1d2a" stopOpacity="0.12" />
             </linearGradient>
             <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
               <feDropShadow dx="0" dy="10" stdDeviation="12" floodColor="#000" floodOpacity="0.45" />
@@ -81,13 +81,13 @@ export function CameroonMap({
                   }}
                   whileHover={{ scale: 1.06 }}
                   whileTap={{ scale: 0.96 }}
-                  className="cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-sagaha-leaf/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+                  className="cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-sagaha-accent/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                 >
                   {/* Halo sélection */}
                   {active ? (
                     <>
-                      <circle cx={cx} cy={cy} r={26} fill="none" stroke="rgba(109,159,122,0.28)" strokeWidth="1" />
-                      <circle cx={cx} cy={cy} r={22} fill="none" stroke="rgba(212,184,125,0.55)" strokeWidth="1.5" />
+                      <circle cx={cx} cy={cy} r={26} fill="none" stroke="rgba(127,29,42,0.45)" strokeWidth="1" />
+                      <circle cx={cx} cy={cy} r={22} fill="none" stroke="rgba(212,175,55,0.55)" strokeWidth="1.5" />
                     </>
                   ) : null}
                   {/* Pin */}
@@ -97,12 +97,12 @@ export function CameroonMap({
                         c 0 8 -11 22 -11 26 
                         c 0 -4 -11 -18 -11 -26 
                         c 0 -6 5 -11 11 -11 z`}
-                    fill={active ? "#d4b87d" : "#64748b"}
-                    stroke={active ? "#f5ead4" : "#94a3b8"}
+                    fill={active ? "#d4af37" : "#64748b"}
+                    stroke={active ? "#f5ecd8" : "#94a3b8"}
                     strokeWidth={active ? 1.4 : 1}
                     opacity={active ? 1 : 0.92}
                   />
-                  <circle cx={cx} cy={cy - 8} r={3.2} fill={active ? "#6d9f7a" : "#1e293b"} />
+                  <circle cx={cx} cy={cy - 8} r={3.2} fill={active ? "#7f1d2a" : "#1e293b"} />
                 </motion.g>
                 <text
                   x={cx}

@@ -4,22 +4,25 @@
 
 :root {
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  /* Repli aligné sur tailwind.config.ts → sagaha (lux impérial) */
+  --sagaha-night: #050308;
+  --sagaha-deep: #0f0812;
+  --sagaha-mist: #f0e6d8;
 }
 
 body {
   font-family: var(--font-sans);
-  /* Repli si les utilitaires Tailwind ne sont pas appliqués (évite une page entièrement blanche) */
-  background-color: #08050d;
-  color: #ebe4ef;
+  background-color: var(--sagaha-night);
+  color: var(--sagaha-mist);
 }
 
-/* Autofill navigateur : même rendu que nos champs sombres (lisibilité) */
+/* Autofill : fond deep impérial (aligné tailwind sagaha.deep) */
 input.sagaha-field:-webkit-autofill,
 input.sagaha-field:-webkit-autofill:hover,
 input.sagaha-field:-webkit-autofill:focus,
 input.sagaha-field:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 1000px #1a1424 inset !important;
-  -webkit-text-fill-color: #f5f0f8 !important;
-  caret-color: #f5f0f8;
+  -webkit-box-shadow: 0 0 0 1000px #0f0812 inset !important;
+  -webkit-text-fill-color: #f5ecd8 !important;
+  caret-color: #f5ecd8;
   transition: background-color 99999s ease-out;
 }

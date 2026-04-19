@@ -39,7 +39,7 @@ export function DistributorsSection() {
         <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-start">
           <CameroonMap markers={regionMarkers} selected={selected} onSelect={setSelected} />
 
-          <div className="rounded-2xl border border-slate-600/35 bg-slate-900/50 p-6 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] ring-1 ring-sagaha-leaf/15 md:p-8">
+          <div className="rounded-2xl border border-slate-600/35 bg-slate-900/50 p-6 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] ring-1 ring-sagaha-accent/20 md:p-8">
             <div className="flex flex-wrap items-end justify-between gap-4 border-b border-slate-700/50 pb-4">
               <div>
                 <p className="text-xs uppercase tracking-widest text-slate-500">Région sélectionnée</p>

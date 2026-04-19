@@ -1,0 +1,11 @@
+---
+description: Palette SAGAHA — luxe impérial, sans vert
+globs: tailwind.config.ts,src/app/globals.css,src/components/public/**/*.tsx,src/components/ui/**/*.tsx,src/components/admin/**/*.tsx
+---
+
+# Couleurs marque SAGAHA
+
+- **Source de vérité** : `tailwind.config.ts` → tokens `sagaha.*` uniquement (`night`, `deep`, `primary`, `vine`, `accent`, `gild`, `mist`, `snow`) et ombres `lux-glow` / `lux-card` / grille `lux-grid`.
+- **Interdit pour l’identité visuelle** : classes `green-*`, `emerald-*`, `teal-*`, `lime-*`, token `sagaha-leaf`, dégradés ou halos « nature » verts. Les feuilles décoratives restent **or / bordeaux / onyx**, pas vert chlorophylle.
+- **Nouveaux écrans** : utiliser `bg-sagaha-night`, `text-sagaha-mist`, CTA `bg-sagaha-primary` + `hover:bg-sagaha-vine`, accents `text-sagaha-accent` ou `border-sagaha-accent/30`, touches secondaires `sagaha-gild`.
+- Si une couleur hors palette est nécessaire (graphiques, SVG), calquer sur les hex du `tailwind.config` (or `#d4af37`, bordeaux `#7f1d2a`, etc.).

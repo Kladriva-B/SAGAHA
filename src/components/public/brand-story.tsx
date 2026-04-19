@@ -37,7 +37,7 @@ export function BrandStorySection() {
               "Emballages conçus pour préserver fraîcheur et arôme.",
             ].map((line) => (
               <li key={line} className="flex gap-3 text-sm leading-relaxed md:text-base">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-br from-sagaha-accent to-sagaha-leaf shadow-[0_0_10px_rgba(109,159,122,0.35)]" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-br from-sagaha-accent to-sagaha-gild shadow-[0_0_12px_rgba(212,175,55,0.4)]" />
                 {line}
               </li>
             ))}
